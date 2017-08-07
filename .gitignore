@@ -1,0 +1,4 @@
+*.pdf
+.*
+# to track .gitignore
+!.gitignore
