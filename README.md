@@ -13,6 +13,12 @@ Here I am going to write some of the commonly used commands in git
 * git init
 (To initialize your present working directory)
 
+# Clone repository
+* git clone [ssh,https url]
+
+# Alias or Alternate names
+git config --global alias.[aliasName] [command]
+
 # To see the status of the repository
 * git status # using option -s will show in short 
 * git log # using -p -2 will show code difference introduced in each commit 2 lines in each commit
@@ -58,3 +64,29 @@ Here I am going to write some of the commonly used commands in git
 
 # Other commands
 * git mv [oldName] [newName]
+(To rename any file or directory)
+* git tag # tags are used to mark important
+(Lists the tags marked)
+* git tag [tagName] # creates lightweight tag, it's just alais to commit
+* git tag -a [tagName] -m "[message]"
+(Used to create a tag)
+* git show [tagName]
+(Shows information about tag)
+* git push [remoteName] [tagName]
+(Pushes tags which are not by default not pushed, including just --tags pushes all)
+# Remote Repository
+* git remote 
+(Gives list of remote repository(s), if included with -v gives details)
+* git remote add [nameOfRemote] [ssh,https url] 
+* git remote rename [oldName] [newName]
+* git remote show [remoteName]
+(Shows details about remote repository)
+* git remote remove [repoName]
+(Removes the server url)
+
+# Fetch files (Does not merge to local)
+* git fetch [remoteName])
+
+# Push files
+* git push [remoteName] [localBranch]
+* 
