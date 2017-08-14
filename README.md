@@ -1,25 +1,25 @@
-## Practise 
+# Practise 
 Here I am going to write some of the commonly used commands in git
 
-# Help
+## Help
 * man git-[verb]
 * git help [verb]
 * git [verb] --help
 
-# At the time of initiation of repository
+## At the time of initiation of repository
 * git config --global user.name "[username]" 
 * git config --global user.email "[emailAddress]"
 (By default the option is --local)
 * git init
 (To initialize your present working directory)
 
-# Clone repository
+## Clone repository
 * git clone [ssh,https url]
 
-# Alias or Alternate names
+## Alias or Alternate names
 git config --global alias.[aliasName] [command]
 
-# To see the status of the repository
+## To see the status of the repository
 * git status # using option -s will show in short 
 * git log # using -p -2 will show code difference introduced in each commit 2 lines in each commit
 * git log --stat # will show stats by file wise in numerals
@@ -27,7 +27,7 @@ git config --global alias.[aliasName] [command]
 * git log --pretty=format:"%h - %an, %ar : %s"
 (Shows log in format specified)
 
-# Track files
+## Track files
 * git add [file or directory]
 (Adds file or directory to staging area, if just included with -A option it adds all files in working directory)
 * git reset HEAD [fileName]
@@ -40,7 +40,7 @@ git config --global alias.[aliasName] [command]
 (To unmodify the changes before staging)
 * git checkout -- CONTRIBUTING.md
 
-# To remove files 
+## To remove files 
 * git rm [fileName]
 (Removes file from repository and needs to be commited)
 * rm [fileName]
@@ -48,21 +48,21 @@ git config --global alias.[aliasName] [command]
 * git rm --cached [fileName]
 (Removes file from tracking-[from staging or commited] but is still present in directory)
 
-# To check differences
+## To check differences
 * git diff [file]
 (Shows the difference between staged and modified file, if you add option --staged; then it shows the difference between staged and the last commit)
 
-# Branches
+## Branches
 * git branch [branchName]
 (To branchout to new one from the current one)
 * git checkout [branchName]
 (To start working in specified branch)
 
-# Git ignore
+## Git ignore
 * For that create a new file called .gitignore and add , for detail see gitignore command
 (You can add filenames or patterns to ignore them while tracking them)
 
-# Other commands
+## Other commands
 * git mv [oldName] [newName]
 (To rename any file or directory)
 * git tag # tags are used to mark important
@@ -74,7 +74,7 @@ git config --global alias.[aliasName] [command]
 (Shows information about tag)
 * git push [remoteName] [tagName]
 (Pushes tags which are not by default not pushed, including just --tags pushes all)
-# Remote Repository
+## Remote Repository
 * git remote 
 (Gives list of remote repository(s), if included with -v gives details)
 * git remote add [nameOfRemote] [ssh,https url] 
@@ -84,9 +84,9 @@ git config --global alias.[aliasName] [command]
 * git remote remove [repoName]
 (Removes the server url)
 
-# Fetch files (Does not merge to local)
+## Fetch files (Does not merge to local)
 * git fetch [remoteName])
 
-# Push files
+## Push files
 * git push [remoteName] [localBranch]
 * 
