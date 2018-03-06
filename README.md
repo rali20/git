@@ -7,9 +7,10 @@ Here I am going to write some of the commonly used commands in git
 * git [verb] --help
 
 ## At the time of initiation of repository
+* git config --list
 * git config --global user.name "[username]" 
 * git config --global user.email "[emailAddress]"
-(By default the option is --local)
+(By default the option is --local for that repo. We can also use --system to apply system wide)
 * git init
 (To initialize your present working directory)
 
@@ -26,6 +27,8 @@ git config --global alias.[aliasName] [command]
 (To see the change log or the history of the project)
 * git log --pretty=format:"%h - %an, %ar : %s"
 (Shows log in format specified)
+* git annotate [file]
+(Shows information about each line about hashes and author)
 
 ## Track files
 * git add [file or directory]
@@ -51,12 +54,15 @@ git config --global alias.[aliasName] [command]
 ## To check differences
 * git diff [file]
 (Shows the difference between staged and modified file, if you add option --staged; then it shows the difference between staged and the last commit)
+* git diff [branch1]..[branch2]
 
 ## Branches
 * git branch [branchName]
 (To branchout to new one from the current one)
 * git checkout [branchName]
 (To start working in specified branch)
+* git checkout -b [newbranch]
+(To create newbranch and checkout to that)
 
 ## Git ignore
 * For that create a new file called .gitignore and add , for detail see gitignore command
@@ -74,6 +80,7 @@ git config --global alias.[aliasName] [command]
 (Shows information about tag)
 * git push [remoteName] [tagName]
 (Pushes tags which are not by default not pushed, including just --tags pushes all)
+
 ## Remote Repository
 * git remote 
 (Gives list of remote repository(s), if included with -v gives details)
@@ -85,8 +92,7 @@ git config --global alias.[aliasName] [command]
 (Removes the server url)
 
 ## Fetch files (Does not merge to local)
-* git fetch [remoteName])
+* git fetch [remoteName]
 
 ## Push files
-* git push [remoteName] [localBranch]
-* 
+* git push [remoteName] [remoteBranch]
